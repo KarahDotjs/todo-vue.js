@@ -34,7 +34,11 @@ const addTodo = () => {
         <div v-else>
           <ul>
             <li v-for="todo in todos" :key="todo.date" class="flex items-center mb-4 font-mono">
-              {{ todo.title }}
+              <label>
+                <input type="checkbox">
+                {{ todo.title }}
+              </label>
+
             </li>
           </ul>
         </div>
