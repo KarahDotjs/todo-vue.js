@@ -1,7 +1,16 @@
 <script setup>
 import { ref } from "vue";
 const newTodo = ref('')
-const todos = ref([]);
+const todos = ref([{
+  title: "Task test",
+  completed: true,
+  date: 1,
+}, {
+  title: "Task to do",
+  completed: false,
+  date: 2,
+}
+]);
 const addTodo = () => {
   todos.value.push({
     title: newTodo.value,
@@ -9,6 +18,9 @@ const addTodo = () => {
     date: Date.now
   })
   newTodo.value = ''
+}
+const sortedTodos = () => {
+  return todos.value.toSorted((a, b) => a.completed > b.completed ? 1 : -1)
 }
 </script>
 <template>
@@ -33,9 +45,10 @@ const addTodo = () => {
         </div>
         <div v-else>
           <ul>
-            <li v-for="todo in todos" :key="todo.date" class="flex items-center mb-4 font-mono">
+            <li v-for="todo in sortedTodos()" :key="todo.date" :class="{ completed: todo.completed }"
+              class=" flex items-center mb-4 font-mono">
               <label>
-                <input type="checkbox">
+                <input type="checkbox" v-model="todo.completed">
                 {{ todo.title }}
               </label>
 
@@ -48,4 +61,10 @@ const addTodo = () => {
   </form>
 
 </template>
-<style scoped></style>
+<style scoped>
+.completed {
+  opacity: .5;
+  text-decoration: line-through;
+  color: red;
+}
+</style>
