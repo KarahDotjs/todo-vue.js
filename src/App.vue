@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
+
 const newTodo = ref('')
+const hideCompleted = ref(false)
 const todos = ref([{
   title: "Task test",
   completed: true,
@@ -20,7 +22,10 @@ const addTodo = () => {
   newTodo.value = ''
 }
 const sortedTodos = () => {
-  return todos.value.toSorted((a, b) => a.completed > b.completed ? 1 : -1)
+  const sortedTodos = todos.value.toSorted((a, b) => a.completed > b.completed ? 1 : -1)
+  if (hideCompleted.value === true) {
+    return sortedTodos.filter(t => t.completed === false)
+  }
 }
 </script>
 <template>
@@ -54,6 +59,13 @@ const sortedTodos = () => {
 
             </li>
           </ul>
+          <div class="flex justify-center">
+            <label for="">
+              <input type="checkbox" v-model="hideCompleted">
+              Hide completed tasks
+            </label>
+
+          </div>
         </div>
       </div>
     </fieldset>
