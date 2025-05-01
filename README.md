@@ -23,11 +23,4 @@ npm run dev
 🛠️ Technologies utilisées
 Vue 3
 
-Vite
 
-✨ Aperçu
-
-📄 Licence
-Ce projet est sous licence MIT.
-
-N'hésite pas à personnaliser ce README selon tes besoins spécifiques. Si tu souhaites ajouter des fonctionnalités supplémentaires ou des captures d'écran, je peux t'aider à les intégrer.​
