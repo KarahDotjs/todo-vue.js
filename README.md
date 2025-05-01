@@ -1,30 +1,33 @@
-# toDoList-vue
+Une application simple et efficace de gestion de tâches, développée avec Vue 3 et Vite. Idéale pour s’initier aux fondamentaux de Vue.js tout en construisant un projet concret.
 
-This template should help get you started developing with Vue 3 in Vite.
+🚀 Fonctionnalités
+✅ Ajouter, compléter et supprimer des tâches
 
-## Recommended IDE Setup
+💾 Sauvegarde des tâches dans le localStorage
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+🧩 Architecture claire avec composants Vue 3
 
-## Customize configuration
+⚙️ Installation
+bash
+Copier
+Modifier
+# Cloner le dépôt
+git clone https://github.com/KarahDotjs/todo-vue.js
+cd todo-vue.js
 
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+# Installer les dépendances
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Lancer le serveur de développement
 npm run dev
-```
+🛠️ Technologies utilisées
+Vue 3
 
-### Compile and Minify for Production
+Vite
 
-```sh
-npm run build
-```
-# todo-vue.js
+✨ Aperçu
+
+📄 Licence
+Ce projet est sous licence MIT.
+
+N'hésite pas à personnaliser ce README selon tes besoins spécifiques. Si tu souhaites ajouter des fonctionnalités supplémentaires ou des captures d'écran, je peux t'aider à les intégrer.​
